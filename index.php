@@ -168,6 +168,10 @@ $where = $_GET['where'];
 		echo str_replace(array("\n","\t"), '',$value[clan_slava][0]). "	".str_replace(array("\n"), '',$value[clan_teg][0]);
 
 		}
+	if ($where == 'metro') 
+		{
+		echo " когда нибудь будет";
+		}
 	if ($where == 'fight_log') 
 		{
 		$start_log_id = 445671046;
