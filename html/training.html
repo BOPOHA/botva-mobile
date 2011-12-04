@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BOTVA MOBILE</title>
+</head>
+
+<body BGCOLOR=#C0C0C0>
+<?php echo '<a href="/?where=training">время сервера: </a>'.$value[time_server][0] ; ?>	
+<table border="1">
+	<tbody>
+	<tr>
+		<td COLSPAN=3>
+			<?php echo '|||<a  href="/?where=main">Летуны</a>|||<a>Тренироваться</a>|||<a href="/?where=dozor">Дозор, Бодалка</a>|||<a href="/?where=post">Почта</a>|||'; ?>
+		</td>
+	</tr>
+    <tr>
+		<td COLSPAN=3>
+		<?php 
+		echo   '<span style="color:#ffffff">'.$value[GOLD][0].' | </span>
+				<span style="color:#ff0000">'.$value[CRYSTAL][0].' | </span>
+				<span style="color:#ffff00">'.$value[FISH][0].' | </span>
+				<span style="color:#00ff00">'.$value[GREEN][0].' | </span>
+				<span style="color:#000000"> <a href="/?where=training&do=mine&as=big">ББП</a> '.$value[bigmine][0].' | </span>
+				<span style="color:#000000"> <a href="/?where=training&do=mine&as=smal">БМП</a> '.$value[smallmine][0].' | </span>	';
+		?>
+		</td>
+	</tr>
+	<tr>
+		<td COLSPAN=3>
+		<?php 
+		echo   '<span style="color:#000000"> EXP '.$value[expLeft2LVLUP][0].' | </span>
+				<span style="color:#000000"><a href="/?where=training&do=health&as=3">HP</a> '.$value[HP][0].' | </span>
+				<span style="color:#000000"><a href="/?where=training&do=health&as=4">P</a> 
+											<a href="/?where=training&do=health&as=5">E</a> 
+											<a href="/?where=training&do=health&as=6">T</a> '.$value[PET][0].' | </span>';
+		?>
+	</td>
+    </tr>
+    <tr>
+		<td>статусы</td>
+		<td><pre><?php echo str_replace(array("\t"), '',$value[time_work][0]) ?></pre></td>
+		<td>
+			<a href="/?where=training&do=farm&as=1">1</a> 
+			<a href="/?where=training&do=farm&as=2">2</a>
+			<a href="/?where=training&do=farm&as=3">3</a>
+			<a href="/?where=training&do=farm&as=12">12</a>
+			<a href="/?where=training&do=farm&as=8">8</a>
+			<a href="/?where=training&do=farm&as=cancel">C</a>
+		</td>
+    </tr>
+    <tr>
+		<td>Сила</td>
+		<td><?php echo $value[tr_power_v][0] ?></td>
+		<td><a href="/?where=training&do=training&as=power"><?php echo $value[tr_power_c][0] ?></a></td>
+    </tr>
+    <tr>
+		<td>Защита</td>
+		<td><?php echo $value[tr_block_v][0] ?></td>
+		<td><a href="/?where=training&do=training&as=block"><?php echo $value[tr_block_c][0] ?></a></td>
+    </tr>
+    <tr>
+		<td>Ловка</td>
+		<td><?php echo $value[tr_dexterity_v][0] ?></td>
+		<td><a href="/?where=training&do=training&as=dexterity"><?php echo $value[tr_dexterity_c][0] ?></a></td>
+    </tr>
+    <tr>
+		<td>Масса</td>
+		<td><?php echo $value[tr_endurance_v][0] ?></td>
+		<td><a href="/?where=training&do=training&as=endurance"><?php echo $value[tr_endurance_c][0] ?></a></td>
+    </tr>
+    <tr>
+		<td>Мастерство</td>
+		<td><?php echo $value[tr_charisma_v][0] ?></td>
+		<td><a href="/?where=training&do=training&as=charisma"><?php echo $value[tr_charisma_c][0] ?></a></td>
+    </tr>
+
+</tbody>
+</table>
+<div><a href="logout.php">ВЫХОД</a></div>
+</body>
+</html>
