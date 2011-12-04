@@ -43,5 +43,7 @@ $xpath = array (
 	'fight_lvl_attack'		=> array ('//table[@class="playerStats"]/tr[2]/td[3]', 'Уровень нападающего в бою', 'fight_log'),
 	'fight_drop'			=> array ('.//table//tr[6]//*[@class="font_large"]', 'Награб в бою', 'fight_log')	
 	);
+	
+$u_root_location_dir = "/botva-mobile";
 ?>
 

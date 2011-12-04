@@ -36,25 +36,25 @@ if (isset($_GET['do']) and isset($_GET['as']))
 													get("http://$server/mine.php?a=mine&m=start&t=1&k=$k");
 													get("http://$server/mine.php?a=mine&m=lastSelected&k=$k");
 													}
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'farm':
 								if ($as == 'cancel') { post("http://$server/farm.php", "k=$k&cmd=$as");} 
 								if ($as !== 'cancel') { post("http://$server/farm.php", "k=$k&cmd=do&work=$as");} 
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'bigtravel':
 								if ($as == 'letun1') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_big&block=events&flying=$flying1_id");} 
 								if ($as == 'letun2') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_big&block=events&flying=$flying2_id");}
 								if ($as == 'letun3') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_big&block=events&flying=$flying3_id");}
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'smalltravel':
 								if ($as == 'letun1') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_small&block=events&flying=$flying1_id&watch_time=10");} 
 								if ($as == 'letun2') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_small&block=events&flying=$flying2_id&watch_time=10");}
 								if ($as == 'letun3') { post("http://$server/castle.php?a=zoo&id=7", "k=$k&do_cmd=do_small&block=events&flying=$flying3_id&watch_time=10");}
 								if (isset($_GET['sleep'])) {sleep(11);}
-								header( "Location: /?where=$where", true, 307 ); 
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 ); 
 								break;
 					case 'help':
 								if ($as == 'letun1') {
@@ -69,13 +69,13 @@ if (isset($_GET['do']) and isset($_GET['as']))
 														get("http://$server/castle.php?a=zoo&id=7&block=events&flying=$flying3_id&do_cmd=minigame&take=1&k=$k");
 														get("http://$server/castle.php?a=zoo&id=7");
 													}
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;				
 					case 'watch':
 								post("http://$server/dozor.php", "k=$k&auto_watch=$as");
 								echo "watch";
 								if (isset($_GET['sleep'])) {sleep(11);}
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'fight':
 								if ($as == 'zorro') { 
@@ -86,40 +86,40 @@ if (isset($_GET['do']) and isset($_GET['as']))
 													post("http://$server/dozor.php?a=monster", "k=$k&ptype=1&level=4");
 													post("http://$server/dozor.php?a=attack", "k=$k");
 													}
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'health':
 								get("http://$server/ajax.php?m=drink&item=$as&auto_drink=undefined");
 				//				  1,2,3 - бутылки для чара; 4,5,6 - бутылки для пета
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'training':
 								post("http://$server/training.php?a=basic", "k=$k&stat=$as&cmd=do_upgrade");
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'mega1':
 								$mega_way  = substr($as, 0, 1);
 								$mega_time = substr($as, 1, 1);
 								post("http://$server/ajax.php?m=mega&action=startmega", "flying_id=$flying1_id&type=$mega_way&stage_count=$mega_time");
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'mega2':
 								$mega_way  = substr($as, 0, 1);
 								$mega_time = substr($as, 1, 1);
 								post("http://$server/ajax.php?m=mega&action=startmega", "flying_id=$flying2_id&type=$mega_way&stage_count=$mega_time");
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'mega3':
 								$mega_way  = substr($as, 0, 1);
 								$mega_time = substr($as, 1, 1);
 								post("http://$server/ajax.php?m=mega&action=startmega", "flying_id=$flying3_id&type=$mega_way&stage_count=$mega_time");
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 					case 'fulldrugs':
 								$mega_way  = substr($as, 0, 1);
 								$mega_time = substr($as, 1, 1);
 								post("http://$server/castle.php?a=zoo&id=7", "flying_id=$flying3_id&type=$mega_way&stage_count=$mega_time");
-								header( "Location: /?where=$where", true, 307 );
+								header( "Location: $u_root_location_dir/?where=$where", true, 307 );
 								break;
 								}
 				}
@@ -152,14 +152,14 @@ $where = $_GET['where'];
 			} 
 			else 
 			{
-				echo 'Вы работаете на ферме или в дозоре, вернитесь сюда позже. <a href="/?where=main">Вернуться</a>';
+				echo "Вы работаете на ферме или в дозоре, вернитесь сюда позже. <a href=\"$u_root_location_dir/?where=main\">Вернуться</a>";
 			}
 
 		}
 	if ($where == 'post') 
 		{
 		params(browse("http://$server/post.php"), 'post');
-		echo '<pre>'.str_replace(array("\t"), '',$value[POSTMESSAGES][0]).'</pre><br>|||<a href="/?where=main">Летуны</a>|||';
+		echo '<pre>'.str_replace(array("\t"), '',$value[POSTMESSAGES][0])."</pre><br>|||<a href=\"$u_root_location_dir/?where=main\">Летуны</a>|||";
 
 		}
 	if ($where == 'clan') 
@@ -185,7 +185,7 @@ $where = $_GET['where'];
 			usleep(300000);
 			}
 		}
-	if ($where == '') {	header( 'Location: /?where=main', true, 307 );	}
-} else { header( 'Location: /?where=main', true, 307 ); }
+	if ($where == '') {	header( "Location: $u_root_location_dir/?where=main", true, 307 );	}
+} else { header( "Location: $u_root_location_dir/?where=main", true, 307 ); }
 
 ?>

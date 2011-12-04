@@ -5,12 +5,12 @@
 </head>
 
 <body BGCOLOR=#C0C0C0>
-<?php echo '<a href="/?where=main">время сервера: </a>'.$value[time_server][0]; ?>	
+<?php echo "<a href=\"?where=main\">время сервера: </a>".$value[time_server][0]; ?>	
 <table border="1">
 	<tbody>
     <tr>
 		<td COLSPAN=3>
-			<?php echo '|||<a>Летуны</a>|||<a href="/?where=training">Тренироваться</a>|||<a href="/?where=dozor">Дозор, Бодалка</a>|||<a href="/?where=post">Почта</a>|||'; ?>
+			<?php echo "|||<a>Летуны</a>|||<a href=\"?where=training\">Тренироваться</a>|||<a href=\"?where=dozor\">Дозор, Бодалка</a>|||<a href=\"?where=post\">Почта</a>|||"; ?>
 		</td>
 	</tr>		
     <tr>
@@ -20,8 +20,8 @@
 				<span style="color:#ff0000">'.$value[CRYSTAL][0].' | </span>
 				<span style="color:#ffff00">'.$value[FISH][0].' | </span>
 				<span style="color:#00ff00">'.$value[GREEN][0].' | </span>
-				<span style="color:#000000"> <a href="/?where=main&do=mine&as=big">ББП</a> '.$value[bigmine][0].' | </span>
-				<span style="color:#000000"> <a href="/?where=main&do=mine&as=smal">БМП</a> '.$value[smallmine][0].' | </span>	';
+				<span style="color:#000000"> <a href="?where=main&do=mine&as=big">ББП</a> '.$value[bigmine][0].' | </span>
+				<span style="color:#000000"> <a href="?where=main&do=mine&as=smal">БМП</a> '.$value[smallmine][0].' | </span>	';
 		?>
 		</td>
 	</tr>
@@ -29,10 +29,10 @@
 		<td COLSPAN=3>
 		<?php 
 		echo   '<span style="color:#000000"> EXP '.$value[expLeft2LVLUP][0].' | </span>
-				<span style="color:#000000"><a href="/?where=main&do=health&as=3">HP</a> '.$value[HP][0].' | </span>
-				<span style="color:#000000"><a href="/?where=main&do=health&as=4">P</a> 
-											<a href="/?where=main&do=health&as=5">E</a> 
-											<a href="/?where=main&do=health&as=6">T</a> '.$value[PET][0].' | </span>';
+				<span style="color:#000000"><a href="?where=main&do=health&as=3">HP</a> '.$value[HP][0].' | </span>
+				<span style="color:#000000"><a href="?where=main&do=health&as=4">P</a> 
+											<a href="?where=main&do=health&as=5">E</a> 
+											<a href="?where=main&do=health&as=6">T</a> '.$value[PET][0].' | </span>';
 		?>
 		</td>
     </tr>
@@ -40,22 +40,22 @@
 		<td>статусы</td>
 		<td><pre><?php echo str_replace(array("\t"), '',$value[time_work][0]) ?></pre></td>
 		<td>
-			<a href="/?where=main&do=farm&as=1">1</a> 
-			<a href="/?where=main&do=farm&as=2">2</a>
-			<a href="/?where=main&do=farm&as=3">3</a>
-			<a href="/?where=main&do=farm&as=12">12</a>
-			<a href="/?where=main&do=farm&as=8">8</a>
-			<a href="/?where=main&do=farm&as=cancel">C</a>
+			<a href="?where=main&do=farm&as=1">1</a> 
+			<a href="?where=main&do=farm&as=2">2</a>
+			<a href="?where=main&do=farm&as=3">3</a>
+			<a href="?where=main&do=farm&as=12">12</a>
+			<a href="?where=main&do=farm&as=8">8</a>
+			<a href="?where=main&do=farm&as=cancel">C</a>
 		</td>
     </tr>
     <tr>
 		<td>летун 1</td>
 		<td><?php echo $value[status_letun_1][0] ?></td>
 		<td>
-			<a href="/?where=main&do=smalltravel&as=letun1&sleep=1">auto10 </a> 
-			<a href="/?where=main&do=smalltravel&as=letun1">smal10</a> 
-			<a href="/?where=main&do=bigtravel&as=letun1">big</a>
-			<a href="/?where=main&do=help&as=letun1"> help</a>
+			<a href="?where=main&do=smalltravel&as=letun1&sleep=1">auto10 </a> 
+			<a href="?where=main&do=smalltravel&as=letun1">smal10</a> 
+			<a href="?where=main&do=bigtravel&as=letun1">big</a>
+			<a href="?where=main&do=help&as=letun1"> help</a>
 			<?php 
 			echo "<table>";
 			for ( $i=1; $i<=3; $i++) 
@@ -63,7 +63,7 @@
 				echo "<tr>";
 				for ( $y=1; $y<=8; $y++) 
 				{
-					echo "<td><a href=\"/?where=main&do=mega1&as=$i$y\">$i$y</a></td>";
+					echo "<td><a href=\"?where=main&do=mega1&as=$i$y\">$i$y</a></td>";
 				} 
 				echo "</tr>";
 			}
@@ -75,10 +75,10 @@
 		<td>летун 2</td>
 		<td><?php echo $value[status_letun_2][0] ?></td>
 		<td>
-			<a href="/?where=main&do=smalltravel&as=letun2&sleep=1">auto10 </a> 
-			<a href="/?where=main&do=smalltravel&as=letun2">smal10 </a> 
-			<a href="/?where=main&do=bigtravel&as=letun2">big </a>
-			<a href="/?where=main&do=help&as=letun2"> help</a>
+			<a href="?where=main&do=smalltravel&as=letun2&sleep=1">auto10 </a> 
+			<a href="?where=main&do=smalltravel&as=letun2">smal10 </a> 
+			<a href="?where=main&do=bigtravel&as=letun2">big </a>
+			<a href="?where=main&do=help&as=letun2"> help</a>
 			<?php 
 			echo "<table>";
 			for ( $i=1; $i<=3; $i++) 
@@ -86,7 +86,7 @@
 				echo "<tr>";
 				for ( $y=1; $y<=8; $y++) 
 				{
-					echo "<td><a href=\"/?where=main&do=mega2&as=$i$y\">$i$y</a></td>";
+					echo "<td><a href=\"?where=main&do=mega2&as=$i$y\">$i$y</a></td>";
 				} 
 				echo "</tr>";
 			}
@@ -98,10 +98,10 @@
 		<td>летун 3</td>
 		<td><?php echo $value[status_letun_3][0] ?></td>
 		<td>
-			<a href="/?where=main&do=smalltravel&as=letun3&sleep=1">auto10 </a> 
-			<a href="/?where=main&do=smalltravel&as=letun3">smal10 </a> 
-			<a href="/?where=main&do=bigtravel&as=letun3">big</a>
-			<a href="/?where=main&do=help&as=letun3"> help</a>
+			<a href="?where=main&do=smalltravel&as=letun3&sleep=1">auto10 </a> 
+			<a href="?where=main&do=smalltravel&as=letun3">smal10 </a> 
+			<a href="?where=main&do=bigtravel&as=letun3">big</a>
+			<a href="?where=main&do=help&as=letun3"> help</a>
 			<?php 
 			echo "<table>";
 			for ( $i=1; $i<=3; $i++) 
@@ -109,7 +109,7 @@
 				echo "<tr>";
 				for ( $y=1; $y<=8; $y++) 
 				{
-					echo "<td><a href=\"/?where=main&do=mega3&as=$i$y\">$i$y</a></td>";
+					echo "<td><a href=\"?where=main&do=mega3&as=$i$y\">$i$y</a></td>";
 				} 
 				echo "</tr>";
 			}

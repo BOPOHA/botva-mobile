@@ -2,15 +2,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>BOTVA MOBILE</title>
-</head>
+</head> 
 
 <body BGCOLOR=#C0C0C0>
-<?php echo '<a href="/?where=dozor">время сервера: </a>'.$value[time_server][0] ; ?>	
+<?php echo '<a href="?where=dozor">время сервера: </a>'.$value[time_server][0] ; ?>	
 <table border="1">
 	<tbody>
 	<tr>
 		<td COLSPAN=3>
-			<?php echo '|||<a  href="/?where=main">Летуны</a>|||<a href="/?where=training">Тренироваться</a>|||<a>Дозор, Бодалка</a>|||<a href="/?where=post">Почта</a>|||'; ?>
+			<?php echo '|||<a  href="?where=main">Летуны</a>|||<a href="?where=training">Тренироваться</a>|||<a>Дозор, Бодалка</a>|||<a href="?where=post">Почта</a>|||'; ?>
 		</td>
 	</tr>	
     <tr>
@@ -20,8 +20,8 @@
 				<span style="color:#ff0000">'.$value[CRYSTAL][0].' | </span>
 				<span style="color:#ffff00">'.$value[FISH][0].' | </span>
 				<span style="color:#00ff00">'.$value[GREEN][0].' | </span>
-				<span style="color:#000000"> <a href="/?where=dozor&do=mine&as=big">ББП</a> '.$value[bigmine][0].' | </span>
-				<span style="color:#000000"> <a href="/?where=dozor&do=mine&as=smal">БМП</a> '.$value[smallmine][0].' | </span>	';
+				<span style="color:#000000"> <a href="?where=dozor&do=mine&as=big">ББП</a> '.$value[bigmine][0].' | </span>
+				<span style="color:#000000"> <a href="?where=dozor&do=mine&as=smal">БМП</a> '.$value[smallmine][0].' | </span>	';
 		?>
 		</td>
 	</tr>
@@ -29,10 +29,10 @@
 		<td COLSPAN=3>
 		<?php 
 		echo   '<span style="color:#000000"> EXP '.$value[expLeft2LVLUP][0].' | </span>
-				<span style="color:#000000"><a href="/?where=dozor&do=health&as=3">HP</a> '.$value[HP][0].' | </span>
-				<span style="color:#000000"><a href="/?where=dozor&do=health&as=4">P</a> 
-											<a href="/?where=dozor&do=health&as=5">E</a> 
-											<a href="/?where=dozor&do=health&as=6">T</a> '.$value[PET][0].' | </span>';
+				<span style="color:#000000"><a href="?where=dozor&do=health&as=3">HP</a> '.$value[HP][0].' | </span>
+				<span style="color:#000000"><a href="?where=dozor&do=health&as=4">P</a> 
+											<a href="?where=dozor&do=health&as=5">E</a> 
+											<a href="?where=dozor&do=health&as=6">T</a> '.$value[PET][0].' | </span>';
 		?>
 	</td>
     </tr>
@@ -45,16 +45,16 @@
      <tr>
 		<td>Дозор</td>
 		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?$value[time2dozor][0]:"Вы чем то заняты" ; ?></td>
-		<td><a href="/?where=dozor&do=watch&as=1&sleep=1">auto10m</a>  <a href="/?where=dozor&do=watch&as=1">10m</a>   <a href="/?where=dozor&do=watch&as=3">30</a> <a href="/?where=dozor&do=watch&as=120">120</a> </td>
+		<td><a href="?where=dozor&do=watch&as=1&sleep=1">auto10m</a>  <a href="?where=dozor&do=watch&as=1">10m</a>   <a href="?where=dozor&do=watch&as=3">30</a> <a href="?where=dozor&do=watch&as=120">120</a> </td>
     </tr>
     <tr>
 		<td>ЗоппЫ</td>
-		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2zorro][0]?$value[time2zorro][0]:'<a href="/?where=dozor&do=fight&as=zorro">атаковать зоппой</a>'):"Вы чем то заняты"; ?></td>
+		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2zorro][0]?$value[time2zorro][0]:'<a href="?where=dozor&do=fight&as=zorro">атаковать зоппой</a>'):"Вы чем то заняты"; ?></td>
 		<td></td>
     </tr>
     <tr>
 		<td>Монстры__</td>
-		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2monster][0]?$value[time2monster][0]:'<a href="/?where=dozor&do=fight&as=monster">атаковать монстра</a>'):"Вы чем то заняты" ; ?></td>
+		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2monster][0]?$value[time2monster][0]:'<a href="?where=dozor&do=fight&as=monster">атаковать монстра</a>'):"Вы чем то заняты" ; ?></td>
 		<td></td>
     </tr>
 
