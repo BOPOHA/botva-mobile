@@ -45,7 +45,7 @@ function params($content, $location) {
 		$dom->formatOutput = true;
 		@$dom->loadHTML($content);
 		$xdom = new DOMXPath($dom);
-		$rip_id = $xdom -> query('//form/input[@type="hidden" and @name="char_id"]/@value') -> item(0) -> value;
+		$rip_id = $xdom -> query('//form/input[@type="hidden" and @name="char_id"]/@value') -> item(0) ;
 		$k =  substr($content, strpos($content,"var KEY=")+8 ,5);
 		//$xdom -> query('//form/input[@type="hidden" and @name="k"]/@value') -> item(0) -> value;
 		$_SESSION['k'] = $k ;

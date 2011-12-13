@@ -1,6 +1,9 @@
 <?php
+
+error_reporting(E_ALL);
 include('func.php');
 include('conf.php');
+include('classes/class.PropertyPage.php');
 $rip_id = "000"; // присваивается id на кого нападать в бодалке.
 
 session_start();
@@ -170,7 +173,10 @@ $where = $_GET['where'];
 		}
 	if ($where == 'metro') 
 		{
-		echo " когда нибудь будет";
+		echo " когда нибудь mбудет";
+		$botva = New PropertyPage();
+		$botva->setUrl("http://$server/post.php");
+		echo $botva->time_server;
 		}
 	if ($where == 'fight_log') 
 		{
