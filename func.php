@@ -21,7 +21,7 @@ function browse($url) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL,$url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+//		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, $useragent);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $httpheader);
 		curl_setopt($ch, CURLOPT_COOKIEFILE, $user_cookie_file);
@@ -45,7 +45,7 @@ function params($content, $location) {
 		$dom->formatOutput = true;
 		@$dom->loadHTML($content);
 		$xdom = new DOMXPath($dom);
-		$rip_id = $xdom -> query('//form/input[@type="hidden" and @name="char_id"]/@value') -> item(0) ;
+		$rip_id = $xdom -> query('//form[1]/input[@type="hidden" and @name="char_id"]/@value') -> item(0) -> value ;
 		$k =  substr($content, strpos($content,"var KEY=")+8 ,5);
 		//$xdom -> query('//form/input[@type="hidden" and @name="k"]/@value') -> item(0) -> value;
 		$_SESSION['k'] = $k ;
@@ -84,7 +84,7 @@ function get($url) {
 	global $user_cookie_file, $useragent, $httpheader, $k;
 		$ch = curl_init();
 				curl_setopt($ch, CURLOPT_URL,$url);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
+//				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 				curl_setopt($ch, CURLOPT_USERAGENT,	$useragent);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $httpheader);
@@ -102,7 +102,7 @@ function get_slava($url) {
 	global $user_cookie_file, $useragent, $httpheader, $k;
 		$ch = curl_init();
 				curl_setopt($ch, CURLOPT_URL,$url);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
+//				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
 				curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 				curl_setopt($ch, CURLOPT_USERAGENT,	$useragent);
 				curl_setopt($ch, CURLOPT_HTTPHEADER, $httpheader);

@@ -24,6 +24,7 @@ $xpath = array (
 		'smallmine'			=> array ('.//*[@id="i33"]', 'Билет на малую поляну', 'all'),
 		'expLeft2LVLUP'		=> array ('.//*[@id="i32"]', 'Количество опыта до следующего уровня', 'all'),
 		'POSTMESSAGES'		=> array ('//table[@class="default post_table "]', 'MESSAGES', 'post'),
+		'time2char'			=> array ('.//*[@id="counter10"]', 'До следующего нападения на чара', 'dozor'),
 		'time2zorro'		=> array ('.//*[@id="counter11"]', 'До следующего нападения с маской Zорро', 'dozor'),
 		'time2monster'		=> array ('.//div[@id="monster_block"]/span[@id="counter_1"]', 'До следующего нападения на страшилку из бодалки', 'dozor'),
 		'time2dozor'		=> array ('.//div[@class="grbody"]//p[5]', 'Осталось дозора', 'dozor'),

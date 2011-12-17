@@ -57,7 +57,11 @@
 		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2monster][0]?$value[time2monster][0]:'<a href="?where=dozor&do=fight&as=monster">атаковать монстра</a>'):"Вы чем то заняты" ; ?></td>
 		<td></td>
     </tr>
-
+    <tr>
+		<td>Слабые___</td>
+		<td><?php echo ($value[IMFREE][0] == "Я свободен!")?($value[time2char][0]?$value[time2char][0]:'<a href="?where=dozor&do=fight&as=char">атаковать слабых</a>'):"Вы чем то заняты" ; ?></td>
+		<td></td>
+    </tr>
 </tbody>
 </table>
 <div><a href="logout.php">ВЫХОД</a></div>
