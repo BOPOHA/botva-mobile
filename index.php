@@ -86,9 +86,12 @@ if (isset($_GET['do']) and isset($_GET['as']))
 													post("http://$server/dozor.php", "char_id=$rip_id&type=more&min=27&max=30&zorro=1&do_attack=1&k=$k");
 													} 
 								if ($as == 'char') { 
-													post("http://$server/dozor.php", "do_search=1&k=$k&type=less&name=");
+													//post("http://$server/dozor.php", "do_search=1&k=$k&type=advanced&min=58&max=59");
+													//post("http://$server/dozor.php", "do_search=1&k=$k&type=less&name=");
+													post("http://$server/dozor.php", "do_search=1&k=$k&type=caste&name=");
 													if ($rip_id) 
-																post("http://$server/dozor.php", "char_id=$rip_id&type=less&min=57&max=59&do_attack=1&k=$k");
+																post("http://$server/dozor.php", "char_id=$rip_id&type=less&min=58&max=59&do_attack=1&k=$k");
+																//post("http://$server/dozor.php", "char_id=$rip_id&type=advanced&min=58&max=59&do_attack=1&k=$k");
 													}
 								if ($as == 'monster') { 
 													//post("http://$server/dozor.php?a=monster", "k=$k&ptype=1&level=4");
